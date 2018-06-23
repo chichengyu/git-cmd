@@ -62,8 +62,8 @@ git reset --hard HEAD^	==> 回退上一个版本
 git reset --hard HEAD^^	==> 回退上上一个版本
 	注：彻底将工作区、暂存区和版本库记录恢复到指定的版本库
 
-git checkout -- index.php ==> 把index.txt文件在工作区的修改全部撤销
-git reset HEAD index.php ==> 可以把暂存区的修改撤销掉（unstage）,重新放回工作区
+git checkout -- index.php 	==> 把index.txt文件在工作区的修改全部撤销
+git reset HEAD index.php 	==> 可以把暂存区的修改撤销掉（unstage）,重新放回工作区
 	注：命令中的--很重要，没有--，就变成了“切换到另一个分支”的命令
 
 git rm --cache 文件名  		==> 仅仅删除暂存区里的文件 
