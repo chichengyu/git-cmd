@@ -46,9 +46,8 @@ git clone 仓库地址  ==> 克隆远程仓库整个项目
 
 
 git add . 			==> 添加当前本地仓库的所有文件到暂存区
-git reset 文件名	==> 取消暂存
-	或
-git reset --
+git reset 文件名    	==> 取消暂存
+	或 git reset --
 git status 			==> 查看暂存区的文件或查看修改了那些文件
 git status -s 			==> 简易查看
 git diff 			==> 查看被修改的文件(所有修改的文件)具体修改了什么内容
