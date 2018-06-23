@@ -22,7 +22,7 @@ ssh -T git@github.com  ===> 验证ssh公钥是否成功
 
 cat .git/config  	==> 查看当前本地仓库的远程仓库
 	一般用来查看 git remote add origin git@github.com:chichengyu/two.git 北地仓库连接的远程github仓库的地址
-git remote rm origin  ==> 删除远程仓库
+git remote rm origin  	==> 删除远程仓库
 	或手动删除 vi .git/config 打开并把[remote “origin”]及内容删掉
 
 git remote add origin 远程仓库地址  ==> 把本地仓库与远程仓库关联起来
@@ -51,9 +51,9 @@ git reset 文件名    	==> 取消暂存
 git status 		==> 查看暂存区的文件或查看修改了那些文件
 git status -s 		==> 简易查看
 git diff 		==> 查看被修改的文件(所有修改的文件)具体修改了什么内容
-git diff index.php 		==> 查看被修改的index.php文件具体修改了什么内容
+git diff index.php 	==> 查看被修改的index.php文件具体修改了什么内容
 
-git commit -m '备注'  ==> 提交
+git commit -m '备注'  	==> 提交
 
 git log  	==> 查看当前版本之前的所有记录
 git reflog	==> 查看所有记录(包括回退后的后面的记录)
