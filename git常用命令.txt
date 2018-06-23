@@ -6,6 +6,9 @@ git config --list => 查看配置的git信息
 git config --global user.name '名字';
 git config --global user.email '邮箱';
 
+
+/***************************************************** github远程仓库 *****************************************************/
+
 配置公钥：
 ssh -T git@github.com  ===> 验证ssh公钥是否成功
 	如果没有,就 cd ~/.ssh 进入 ls 查看是否有
@@ -31,19 +34,20 @@ git remote add origin 远程仓库地址  ==> 把本地仓库与远程仓库关�
 	或手动修改远程仓库地址
 	vi .git/config
 
-git remote -v 	==> 查看远程仓库配置
+git remote -v 				==> 查看远程仓库配置
 
-git pull origin master 把远程仓库的文件拉到本地仓库
-	或
-git pull --rebase origin master
+git pull origin master 		==> 把远程仓库的文件拉到本地仓库
+	或 git pull --rebase origin master
 	注意：如果远程库不为空必须做这一步，否则后面的提交会失败
 
-git push -u origin master 吧本地仓库的文件提交到远程仓库
+git push -u origin master 	==> 吧本地仓库的文件提交到远程仓库
 	注：加上-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
 	注意：提交时,本地仓库不能为空,不然报错
 
-git clone 仓库地址  ==> 克隆远程仓库整个项目
+git clone 仓库地址  		==> 克隆远程仓库整个项目
 
+
+/***************************************************** git版本库 *****************************************************/
 
 git add . 		==> 添加当前本地仓库的所有文件到暂存区
 git reset 文件名    	==> 取消暂存
