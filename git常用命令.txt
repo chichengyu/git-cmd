@@ -64,7 +64,7 @@ git reset HEAD index.php ==> 可以把暂存区的修改撤销掉（unstage）,�
 
 git rm --cache 文件名  		==> 仅仅删除暂存区里的文件 
 
-git rm -f 文件名  		    ==> 删除暂存区和工作区的文件
+git rm -f 文件名  		==> 删除暂存区和工作区的文件
 
 git reset --soft 版本库ID  	==> 仅仅只是撤销已提交的版本库，不会修改暂存区和工作区
 
