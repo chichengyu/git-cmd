@@ -15,7 +15,7 @@ ssh -T git@github.com  ===> 验证ssh公钥是否成功
 	如果没有,就 cd ~/.ssh 进入 ls 查看是否有
 		id_rsa  id_rsa.pub 这两个文件
 		注：id_rsa是私钥
-		id_rsa.pub是公钥
+		    id_rsa.pub是公钥
 
 	如果如果没有这两个文件就
 		ssh-keygen -t rsa
