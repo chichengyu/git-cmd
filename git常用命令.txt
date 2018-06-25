@@ -71,7 +71,8 @@ git checkout -- index.php 	==> 把index.txt文件在工作区的修改全部撤�
 git reset HEAD index.php 	==> 可以把暂存区的修改撤销掉（unstage）,重新放回工作区
 	注：命令中的--很重要，没有--，就变成了“切换到另一个分支”的命令
 
-git rm --cache 文件名  		==> 仅仅删除暂存区里的文件 
+git rm -r --cache 文件名  	==> 仅仅删除暂存区里的文件
+	注：-r 是递归删除 
 
 git rm -f 文件名  		==> 删除暂存区和工作区的文件
 
