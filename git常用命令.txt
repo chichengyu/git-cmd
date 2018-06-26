@@ -81,4 +81,53 @@ git reset --soft 版本库ID  	==> 仅仅只是撤销已提交的版本库，不
 git reset --mixed 版本库ID 	==> 仅仅只是撤销已提交的版本库和暂存区，不会修改工作区
 
 
+/***************************************************** 分支 *****************************************************/
 
+git checkout -b dev  ==> 创建dev分支，然后切换到dev分支
+	注：git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+			git branch dev   -> 创建分支
+			git checkout dev -> 切换分支
+
+
+git branch  	==> 查看所有分支，当前分支前面会标一个*号
+
+git merge dev   ==> 把dev分支的工作成果合并到master分支上
+	注：合并时,会出现Fast-forward信息，Git告诉我们，这次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快。当然，也不是每次合并都能Fast-forward
+
+	或 git merge --no-ff -m "merge with no-ff" dev
+		注意：1.--no-ff参数，表示禁用Fast forward,用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并
+			  2.因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去
+
+
+git log --graph ==> 查看分支合并图
+
+git branch -d dev  	==> 删除dev分支
+	注：-d是delete强制删除
+
+git branch -m 名称	==> 重命名分支
+	注：-m是强制重命名
+
+	注意：git branch --help打开官方网站的git branch帮助文档
+
+
+
+git stash   	==> 把当前未完工作“储藏”起来，等以后恢复现场后继续工作
+
+git stash list  ==> 查看“储藏”的工作
+
+$ git stash apply stash@{0}  ==> 恢复的时候，先用git stash list查看，然后恢复指定的stash
+	注：1.用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除
+		2.git stash pop，恢复的同时把stash内容也删了
+
+	再用git stash list查看，就看不到任何stash内容了
+
+
+
+git push origin dev  ==> 推送dev分支
+	注：如果推送失败，先用git pull抓取远程的新提交
+
+git pull			 ==> 抓取远程仓库所有分支
+	注：如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>
+
+git checkout -b branch-name origin/branch-name   ==> 在本地创建和远程分支对应的分支
+	注：远程仓库必须存在branch-name名称的分支，本地仓库的分支branch-name才能创建成功
