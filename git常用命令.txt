@@ -126,8 +126,11 @@ $ git stash apply stash@{0}  ==> 恢复的时候，先用git stash list查看，
 git push origin dev  ==> 推送dev分支
 	注：如果推送失败，先用git pull抓取远程的新提交
 
-git pull 	  ==> 抓取远程仓库所有分支
+git pull 	     ==> 抓取远程仓库所有分支
 	注：如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>
 
 git checkout -b branch-name origin/branch-name   ==> 在本地创建和远程分支对应的分支
 	注：远程仓库必须存在branch-name名称的分支，本地仓库的分支branch-name才能创建成功
+
+
+
