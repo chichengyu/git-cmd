@@ -96,7 +96,7 @@ git merge dev   ==> 把dev分支的工作成果合并到master分支上
 
 	或 git merge --no-ff -m "merge with no-ff" dev
 		注意：1.--no-ff参数，表示禁用Fast forward,用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并
-			2.因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去
+		   2.因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去
 
 
 git log --graph 	==> 查看分支合并图
