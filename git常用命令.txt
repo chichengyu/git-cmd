@@ -115,7 +115,7 @@ git stash   	==> 把当前未完工作“储藏”起来，等以后恢复现场
 
 git stash list  ==> 查看“储藏”的工作
 
-$ git stash apply stash@{0}  ==> 恢复的时候，先用git stash list查看，然后恢复指定的stash
+git stash apply stash@{0}  ==> 恢复的时候，先用git stash list查看，然后恢复指定的stash
 	注：1.用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除
 		2.git stash pop，恢复的同时把stash内容也删了
 
