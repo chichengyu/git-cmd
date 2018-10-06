@@ -92,6 +92,9 @@ git checkout -b dev  ==> 创建dev分支，然后切换到dev分支
 git branch  	==> 查看所有分支，当前分支前面会标一个*号
 
 git merge dev   ==> 把dev分支的工作成果合并到master分支上
+	如：把 index 分支合并到 master 分支
+	    首先 切换到 master分支 
+	    git merge origin/index
 	注：合并时,会出现Fast-forward信息，Git告诉我们，这次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快。当然，也不是每次合并都能Fast-forward
 
 	或 git merge --no-ff -m "merge with no-ff" dev
