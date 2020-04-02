@@ -7,6 +7,8 @@ git config --list => 查看配置的git信息
 git config --global user.name '名字';
 git config --global user.email '邮箱';
 
+git config --global --unset user.name 删除属性
+
 
 /***************************************************** github远程仓库 *****************************************************/
 
