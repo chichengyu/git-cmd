@@ -14,6 +14,8 @@ git config --global --unset user.name 删除属性
 git rm -r -f --cached . 清除对所有文件的追踪(-r表示强制，.表示所有文件，也可以是文件名)
 
 git config --system --unset credential.helper 解决没有弹出输入用户名和密码的提示框
+
+git config --global http.sslVerify false 永久取消ssl认证
 ```
 
 ##### github远程仓库
