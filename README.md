@@ -12,6 +12,8 @@ git config --global user.email '邮箱';
 git config --global --unset user.name 删除属性
 
 git rm -r -f --cached . 清除对所有文件的追踪(-r表示强制，.表示所有文件，也可以是文件名)
+
+git config --system --unset credential.helper 解决没有弹出输入用户名和密码的提示框
 ```
 
 ##### github远程仓库
@@ -24,10 +26,10 @@ ssh -T git@github.com  ===> 验证ssh公钥是否成功
 		注： id_rsa是私钥
 		     id_rsa.pub是公钥
 
-	如果如果没有这两个文件就
-		ssh-keygen -t rsa
+	如果如果没有这两个文件就需要运行如下命令,生成公钥私钥
+		ssh-keygen -t rsa(新版本加密方式ed25519) / ssh-keygen -t ed25519
 		或
-		ssh-keygen –C “你的email地址 “ –t rsa
+		ssh-keygen -t rsa(新版ed25519) –C “你的email地址 “ / ssh-keygen -t ed25519 –C “你的email地址 “
 	进行创建公钥,然后找到C:\Users\小池\.ssh下的id_rsa.ssh文件打开,并把内容公钥添加到github上,然后再次进行上面的命令,进行验证
 
 
@@ -53,6 +55,7 @@ git push -u origin master ==> 吧本地仓库的文件提交到远程仓库
 	注意：提交时,本地仓库不能为空,不然报错
 
 git clone 仓库地址 	  ==> 克隆远程仓库整个项目
+	git clone https://{用户名}:{密码}@{gitlab地址}/具体项目.git  => 不使用windows保存的凭据
 
 ```
 ##### git版本库
