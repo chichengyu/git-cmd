@@ -10,6 +10,8 @@ git config --global user.name '名字';
 git config --global user.email '邮箱';
 
 git config --global --unset user.name 删除属性
+
+git rm -r -f --cached . 清除对所有文件的追踪(-r表示强制，.表示所有文件，也可以是文件名)
 ```
 
 ##### github远程仓库
