@@ -58,7 +58,7 @@ git push -u origin master ==> 吧本地仓库的文件提交到远程仓库
 
 git clone 仓库地址 	  ==> 克隆远程仓库整个项目
 	git clone https://{用户名}:{密码}@{gitlab地址}/具体项目.git  ==> 不使用windows保存的凭据
-	env GIT_SSL_NO_VERIFY=true git clone https://xxxx.git 	   ==> 跳过ssl证书克隆
+	env GIT_SSL_NO_VERIFY=true git clone https://xxxx.git      ==> 跳过ssl证书克隆
 
 ```
 ##### git版本库
